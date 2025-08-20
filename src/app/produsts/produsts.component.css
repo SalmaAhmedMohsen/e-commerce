@@ -1,0 +1,8 @@
+.bg-light-beige {
+  background-color: #e1c9af;
+}
+
+.bg-light-beige:hover {
+  background-color: #e7d6c0;
+  cursor: pointer;
+}

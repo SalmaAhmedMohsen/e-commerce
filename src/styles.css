@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: "josefinsans";
+  src: url("assets/fonts/josefinsans.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: "josefinsans", sans-serif;
+}
+

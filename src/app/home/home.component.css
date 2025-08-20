@@ -1,0 +1,31 @@
+/* Styling Hero Banner */
+/* .banner {
+height: 40vh;
+object-fit: cover;
+} */
+
+.text-overlay {
+  font-size: 1vw; /* بيصغر مع الشاشة */
+}
+
+.margin-bottom {
+  margin-bottom: 100px;
+}
+
+.padding-left {
+  padding-left: 200px;
+}
+
+.bg-beige {
+  background-color: #a08972;
+}
+
+.bg-light-beige {
+  background-color: #e1c9af;
+}
+
+.bg-light-beige:hover {
+  background-color: #e7d6c0;
+  cursor: pointer;
+}
+

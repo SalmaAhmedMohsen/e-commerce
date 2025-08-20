@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row justify-content-center align-items-center mt-5">
+    <div class="col-md-3 bg-light-beige rounded">
+      <img [src]="productInfo?.images ?? './../../../assets/imgs/Loading_spinner.svg.png'"  alt="" class="img-fluid" />
+    </div>
+    <div class="col-md-9">
+      <h4 class="fw-bold">
+        {{ productInfo?.title }}
+      </h4>
+      <p class="text-muted">
+        Rating: <i class="fa-solid fa-star" style="color: #FFD43B;"></i> {{productInfo?.rating}}
+      </p>
+      <h5 class="text-primary">
+        {{productInfo?.price | currency}}
+      </h5>
+      <p class="text-muted">
+        {{productInfo?.description}}
+      </p>
+      <p class="fw-bold text-muted">
+        {{productInfo?.stock}} items left
+      </p>
+      <button class="btn btn-success w-100">Add to Cart</button>
+    </div>
+  </div>
+</div>

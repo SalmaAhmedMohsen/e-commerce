@@ -1,0 +1,47 @@
+<h1 class="fw-bold text-center my-5">Our Products</h1>
+<div class="container">
+  <div class="row justify-content-center gap-5">
+    <div
+      class="col-md-2 bg-light-beige rounded d-flex flex-column"
+      *ngFor="let product of products"
+      [routerLink]='["/productDetails", product.id]'
+    >
+
+    <!-- Upper -->
+      <div class="flex-grow-1">
+        <div>
+          <img
+            [src]="product.images[0]"
+            class="img-fluid"
+            [alt]="product.title"
+          />
+        </div>
+        <h6 class="text-center">
+          {{ product.title }}
+        </h6>
+        <div><b>Brand: </b>{{ product.brand }}</div>
+        <div><b>Price: </b>{{ product.price | currency }}</div>
+        <div>
+          <b>Rating: </b><i class="fa-solid fa-star" style="color: #ffd43b"></i>
+          {{ product.rating }}
+        </div>
+      </div>
+
+      <!-- Lower -->
+      <div class="mt-auto">
+        <div
+          class="w-100 rounded text-center my-2"
+          [ngClass]="{
+            'bg-light': product.availabilityStatus == 'In Stock',
+            'bg-secondary': product.availabilityStatus == 'Low Stock',
+            'bg-danger':
+              product.availabilityStatus != 'In Stock' &&
+              product.availabilityStatus != 'Low Stock'
+          }"
+        >
+          {{ product.availabilityStatus }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
