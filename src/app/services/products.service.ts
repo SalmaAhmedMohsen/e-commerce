@@ -16,4 +16,7 @@ export class ProductsService {
   getCustomersFeedback(): Observable<any>{
   return this._httpClient.get('https://dummyjson.com/quotes')
   }
+  getProductsByCategory(category: string): Observable<any> {
+    return this._httpClient.get(`https://dummyjson.com/products/category/${category}`)
+  }
 }

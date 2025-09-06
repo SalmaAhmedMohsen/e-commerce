@@ -6,16 +6,17 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { SearchPipe } from './pipes/search.pipe';
 import { FormsModule } from '@angular/forms';
 import { ProductDetailsComponent } from './product-details/product-details.component';
-import { CategoriesComponent } from './categories/categories.component';
 import { ProdustsComponent } from './produsts/produsts.component';
 import { AboutComponent } from './about/about.component';
 import { CustomersComponent } from './customers/customers.component';
 import { FooterComponent } from './footer/footer.component';
 import { SearchComponent } from './search/search.component';
+import { CategoryComponent } from './category/category.component';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -25,20 +26,16 @@ import { SearchComponent } from './search/search.component';
     NotFoundComponent,
     SearchPipe,
     ProductDetailsComponent,
-    CategoriesComponent,
     ProdustsComponent,
     AboutComponent,
     CustomersComponent,
     FooterComponent,
     SearchComponent,
+    CategoryComponent,
+    CartComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    FormsModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

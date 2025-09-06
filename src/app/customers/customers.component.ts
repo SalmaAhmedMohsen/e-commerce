@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductsService } from '../products.service';
-import { Feedback } from '../feedback';
+import { ProductsService } from '../services/products.service';
+import { Feedback } from '../interfaces/feedback';
 
 @Component({
   selector: 'app-customers',

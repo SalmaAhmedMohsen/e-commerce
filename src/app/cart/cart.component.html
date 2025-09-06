@@ -1,0 +1,41 @@
+<div
+  class="offcanvas offcanvas-end"
+  tabindex="-1"
+  id="cartSidebar"
+  aria-labelledby="cartLabel"
+>
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="cartLabel">🛒 Your Cart</h5>
+    <button
+      type="button"
+      class="btn-close shadow-none"
+      data-bs-dismiss="offcanvas"
+      aria-label="Close"
+    ></button>
+  </div>
+  <div class="offcanvas-body">
+  <div *ngIf="cartItems.length === 0">Your cart is empty</div>
+    <div *ngFor="let item of cartItems; let i = index" class="row mb-3 border-bottom pb-2 align-items-center">
+      <div class="col-4">
+        <img [src]="item.images[0]" alt="" class="img-fluid"/>
+      </div>
+      <div class="col-8">
+        <h6>{{ item.title }}</h6>
+        <p>{{ item.price | currency }}</p>
+          <div class="d-flex align-items-center">
+        <label for="quantity" class="text-muted me-2">Quantity</label>
+        <input
+          type="number"
+          id="quantity"
+          class="form-control w-25 mb-2"
+          [value]= item.quantity
+          min="1"
+        />
+      </div>
+        <i (click)="deleteItem(i)" class="fa-solid fa-trash cursor-pointer"></i>
+      </div>
+    </div>
+    <button *ngIf="cartItems.length !== 0" class="btn bg-beige text-white w-100" (click)="checkout()">Checkout</button>
+  </div>
+</div>
+

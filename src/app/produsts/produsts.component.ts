@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Product } from '../product';
-import { ProductsService } from '../products.service';
+import { Product } from '../interfaces/product';
+import { ProductsService } from '../services/products.service';
 
 @Component({
   selector: 'app-produsts',
@@ -8,18 +8,6 @@ import { ProductsService } from '../products.service';
   styleUrls: ['./produsts.component.css'],
 })
 export class ProdustsComponent implements OnInit{
-  // products: Product[] = [];
-
-  // ngOnInit() {
-  //   this.getProducts();
-  // }
-  // constructor(private _productsService: ProductsService) {}
-  // getProducts() {
-  //   this._productsService.getProducts().subscribe({
-  //     next: (data) => (this.products = data.products),
-  //     error: (err) => console.log(err),
-  //   });
-  // }
   products: Product[] = [];
   constructor(private _productsService: ProductsService) {}
   ngOnInit(): void {
@@ -28,7 +16,10 @@ export class ProdustsComponent implements OnInit{
 
   getProducts() {
     this._productsService.getProducts().subscribe({
-      next: (data) => this.products = data.products,
+      next: (data) => {this.products = data.products;
+        console.log(this.products);
+        
+      },
       error: (err) => console.log(err),
     });
   }

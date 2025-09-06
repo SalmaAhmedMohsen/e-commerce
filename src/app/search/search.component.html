@@ -10,7 +10,7 @@
   <div class="d-flex justify-content-center">
     <div class="w-50" *ngIf="searchTerm">
       <div
-        class="border-bottom p-2 bg-light-beige"
+        class="border-bottom p-2 bg-light-beige cursor-pointer"
         *ngFor="let product of products | search : searchTerm"
         [routerLink]="['/productDetails', product.id]"
       >
@@ -31,3 +31,38 @@
     </div>
   </div>
 </div>
+
+
+
+
+
+<!-- Search Inhancemet -->
+
+<!-- زرار فتح البحث -->
+<!-- <button class="btn btn-primary" (click)="openSearch()">🔍 Search</button> -->
+
+<!-- Search Overlay -->
+<!-- <div *ngIf="isSearchOpen" class="position-fixed top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-start" style="z-index:1050;"> -->
+
+  <!-- الخلفية المظللة -->
+  <!-- <div class="position-absolute w-100 h-100 bg-dark bg-opacity-50" (click)="closeSearch()"></div> -->
+
+  <!-- صندوق البحث -->
+  <!-- <div class="position-relative bg-white p-4 rounded shadow mt-5" style="z-index:1100; max-width:600px; width:90%;">
+    <div class="d-flex align-items-center mb-3">
+      <input type="text" class="form-control me-2" placeholder="Type to search..." [(ngModel)]="searchTerm" />
+      <button class="btn btn-outline-secondary" (click)="closeSearch()">✖</button>
+    </div>
+
+    <div *ngFor="let product of filteredProducts()" class="border-bottom p-2" [routerLink]="['/productDetails', product.id]" style="cursor:pointer;">
+      <div class="d-flex align-items-center">
+        <img [src]="product.images[0]" alt="{{product.title}}" class="img-fluid w-25 me-2"/>
+        <div>
+          <div>{{product.title}}</div>
+          <div class="text-muted">{{product.price | currency}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div> -->

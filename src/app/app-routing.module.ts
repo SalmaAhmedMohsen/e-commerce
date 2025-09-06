@@ -7,6 +7,8 @@ import { ProdustsComponent } from './produsts/produsts.component';
 import { AboutComponent } from './about/about.component';
 import { CustomersComponent } from './customers/customers.component';
 import { SearchComponent } from './search/search.component';
+import { CategoryComponent } from './category/category.component';
+import { CartComponent } from './cart/cart.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -20,6 +22,12 @@ const routes: Routes = [
     title: 'Product Details',
   },
   { path: 'search', component: SearchComponent },
+  {
+    path: 'category/:categoryName',
+    component: CategoryComponent,
+    title: 'Category',
+  },
+  { path: 'cart', component: CartComponent, title: 'Cart' },
   { path: '**', component: NotFoundComponent, title: 'Not Found' },
 ];
 
