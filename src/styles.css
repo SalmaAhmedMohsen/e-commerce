@@ -26,6 +26,10 @@ body {
   background-color: #e7d6c0;
 }
 
+.text-beige {
+  color: #a08972;
+}
+
 .cursor-pointer {
   cursor: pointer;
 }

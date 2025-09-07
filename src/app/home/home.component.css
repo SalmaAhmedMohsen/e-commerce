@@ -1,40 +1,42 @@
-/* Styling Hero Banner */
-/* .banner {
-height: 40vh;
-object-fit: cover;
-} */
+.hero-banner {
+  background-image: url("../../assets/imgs/hero banner.jpg");
+  min-height: 600px;
+  background-size: cover;
+  background-position: center;
+}
 
-.header {
+.hero-content {
+  width: 100%;
+  padding-right: 40%;
   text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
-  font-weight: bold;
-}
-
-.margin-bottom {
-  margin-bottom: 100px;
 }
 
 .header {
-  font-size: 4rem;
+  font-weight: bold;
+  font-size: 3rem;
 }
-.padding-left {
-  padding-left: 15%;
+/* Mobile */
+@media (max-width: 576px) {
+  .hero-banner {
+    min-height: 300px;
+  }
+  .header {
+    font-size: 1.7rem;
+  }
+  .hero-content {
+    padding: 5%;
+  }
 }
 
-/* Mobile */
-@media only screen and (max-width: 600px) {
-  .header {
-    font-size: 1rem;
-  }
-  .padding-left {
-    padding-left: 5%;
-  }
-}
 /* Tablet */
-@media only screen and (min-width: 601px) and (max-width: 1024px) {
+@media (min-width: 577px) and (max-width: 992px) {
+  .hero-banner {
+    min-height: 300px;
+  }
   .header {
     font-size: 2rem;
   }
-  .padding-left {
-    padding-left: 15%;
+  .hero-content {
+    padding-right: 40%;
   }
 }
