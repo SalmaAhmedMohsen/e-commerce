@@ -9,8 +9,13 @@ import { ProductsService } from '../services/products.service';
 })
 export class ProdustsComponent implements OnInit{
   products: Product[] = [];
+  isList: boolean = false;
   constructor(private _productsService: ProductsService) {}
   ngOnInit(): void {
+    const list = localStorage.getItem('isList');
+    if(list){
+      this.isList = JSON.parse(list)
+    }
     this.getProducts();
   }
 
@@ -22,5 +27,10 @@ export class ProdustsComponent implements OnInit{
       },
       error: (err) => console.log(err),
     });
+  }
+
+  changeDisplay(){
+    this.isList = !this.isList;
+    localStorage.setItem('isList', JSON.stringify(this.isList))
   }
 }

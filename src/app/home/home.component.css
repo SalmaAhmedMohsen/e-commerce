@@ -1,13 +1,50 @@
-.hero-banner {
-  background-image: url("../../assets/imgs/hero banner.jpg");
-  min-height: 600px;
+.general {
+  background-image: url("../../assets/imgs/general.png");
+  height: 600px;
   background-size: cover;
   background-position: center;
 }
 
-.hero-content {
-  width: 100%;
-  padding-right: 40%;
+.beauty {
+  background-image: url("../../assets/imgs/makeup.png");
+  height: 600px;
+  background-size: cover;
+  background-position: center;
+}
+
+.skincare {
+  background-image: url("../../assets/imgs/skincare.png");
+  height: 600px;
+  background-size: cover;
+  background-position: center;
+}
+
+.fragrances {
+  background-image: url("../../assets/imgs/fragrences.png");
+  height: 600px;
+  background-size: cover;
+  background-position: center;
+}
+
+.accessories {
+  background-image: url("../../assets/imgs/accessories.png");
+  height: 600px;
+  background-size: cover;
+  background-position: center;
+}
+
+.bags {
+  background-image: url("../../assets/imgs/bags.png");
+  height: 600px;
+  background-size: cover;
+  background-position: center;
+}
+
+.padding-left {
+  padding-left: 150px;
+}
+
+.text-shadow {
   text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
 }
 
@@ -15,28 +52,56 @@
   font-weight: bold;
   font-size: 3rem;
 }
+
 /* Mobile */
 @media (max-width: 576px) {
-  .hero-banner {
-    min-height: 300px;
+  .general,
+  .beauty,
+  .skincare,
+  .fragrances,
+  .accessories,
+  .bags {
+    height: 210px;
   }
-  .header {
-    font-size: 1.7rem;
+
+  .general-header {
+    font-size: 1.5rem;
   }
-  .hero-content {
-    padding: 5%;
+
+  .header-size {
+    font-size: 1.2rem;
+  }
+
+  .padding-left {
+    padding-left: 35px;
+  }
+
+  .width-50 {
+    width: 50%;
+    word-wrap: break-word;
+  }
+
+  .btn-medium {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
   }
 }
 
 /* Tablet */
 @media (min-width: 577px) and (max-width: 992px) {
-  .hero-banner {
-    min-height: 300px;
+  .general,
+  .beauty,
+  .skincare,
+  .fragrances,
+  .accessories,
+  .bags {
+    height: 350px;
   }
-  .header {
-    font-size: 2rem;
+  .width-50 {
+    width: 50%;
+    word-wrap: break-word;
   }
-  .hero-content {
-    padding-right: 40%;
+  .padding-left {
+    padding-left: 60px;
   }
 }

@@ -18,6 +18,7 @@ import { SearchComponent } from './search/search.component';
 import { CategoryComponent } from './category/category.component';
 import { CartComponent } from './cart/cart.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

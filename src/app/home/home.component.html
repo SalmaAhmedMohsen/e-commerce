@@ -1,12 +1,73 @@
-
-<!-- Banner -->
-<section class="hero-banner mb-5 d-flex align-items-center">
-  <div class="hero-content text-center text-white">
-    <h1 class="header">Welcome to Loomi</h1>
-    <p>Discover our beautiful products</p>
-    <button class="btn bg-beige btn-lg text-white" routerLink="/products">Shop Now</button>
+<!-- Carousel and auto slide every 3 sec-->
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
   </div>
-</section>
+  <div class="carousel-inner mb-5">
+    <div class="carousel-item active general">
+      <div class="d-flex align-items-center h-100 w-100">
+        <div class="text-shadow w-100 text-center text-white">
+          <h1 class="fw-bold general-header">Welcome to Loomi</h1>
+          <p>Discover our beautiful products</p>
+          <button class="btn bg-beige btn-lg text-white btn-medium" routerLink="/products">Shop Now</button>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item beauty">
+      <div class="d-flex w-100 h-100 align-items-center padding-left">
+        <div class="text-center text-white text-shadow width-50">
+          <h3 class="fw-bold header-size">Find the perfect makeup essentials to glow every day</h3>
+          <button class="btn bg-beige btn-lg text-white mt-1 btn-medium" [routerLink] ='["/category", "beauty"]'>Shop Now</button>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item skincare">
+      <div class="d-flex w-100 h-100 align-items-center padding-left">
+        <div class="text-center text-white text-shadow width-50">
+          <h3 class="fw-bold header-size">Your daily routine for glowing, flawless skin starts here</h3>
+          <button class="btn bg-beige btn-lg text-white mt-1 btn-medium" [routerLink] ='["/category", "skin-care"]'>Shop Now</button>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item fragrances">
+      <div class="d-flex w-100 h-100 align-items-center padding-left">
+        <div class="text-center text-white text-shadow width-50">
+          <h3 class="fw-bold header-size">Discover fragrances that capture your elegance and style</h3>
+          <button class="btn bg-beige btn-lg text-white mt-1 btn-medium"[routerLink] ='["/category", "skin-care"]'>Shop Now</button>
+        </div>
+      </div>
+    </div>
+       <div class="carousel-item accessories">
+      <div class="d-flex w-100 h-100 align-items-center padding-left">
+        <div class="text-center text-white text-shadow width-50">
+          <h3 class="fw-bold header-size">Add the perfect finishing touch to every outfit</h3>
+          <button class="btn bg-beige btn-lg text-white mt-1 btn-medium"[routerLink] ='["/category", "womens-jewellery"]'>Shop Now</button>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item bags">
+         <div class="d-flex w-100 h-100 align-items-center padding-left">
+        <div class="text-center text-white text-shadow width-50">
+          <h3 class="fw-bold header-size">Find the perfect bag for every occasion</h3>
+          <button class="btn bg-beige btn-lg text-white mt-1 btn-medium"[routerLink] ='["/category", "womens-bags"]'>Shop Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
 
 <!-- Categories -->
 <div class="container">
@@ -15,34 +76,34 @@
     <h3 class="text-beige fw-bold mb-3">Categories</h3>
   </div>
   <div class="row justify-content-center">
-     <div class="col-6 col-md-2">
-       <div class="bg-light-beige cursor-pointer rounded" [routerLink] ='["/category", "beauty"]'>
+     <div class="col-6 col-lg-2">
+       <div class="bg-light-beige cursor-pointer rounded text-center" [routerLink] ='["/category", "beauty"]'>
          <img [src]="beautyImg" alt="eyeshadow-palette-with-mirror" class="img-fluid"/>
-         <p class="fw-bold d-flex justify-content-center">Beauty</p>
+         <h4 class="fw-bold d-flex justify-content-center pb-2">Beauty</h4>
        </div>
      </div>
-     <div class="col-6 col-md-2">
+     <div class="col-6 col-lg-2">
        <div class="bg-light-beige cursor-pointer rounded" [routerLink] ='["/category", "fragrances"]'>
          <img [src]="fragrancesImg" alt="dior-j'adore" class="img-fluid"/>
-         <p class="fw-bold d-flex justify-content-center">Fragrances</p>
+         <h4 class="fw-bold d-flex justify-content-center pb-2">Fragrances</h4>
        </div>
      </div>
-     <div class="col-6 col-md-2">
-       <div class="bg-light-beige cursor-pointer rounded" [routerLink] ='["/category", "skin-care"]'>
+     <div class="col-6 col-lg-2">
+       <div class="bg-light-beige cursor-pointer rounded text-center" [routerLink] ='["/category", "skin-care"]'>
          <img [src]="skinCareImg" alt="attitude-super-leaves-hand-soap" class="img-fluid"/>
-         <p class="fw-bold d-flex justify-content-center">Skin Care</p>
+         <h4 class="fw-bold d-flex justify-content-center pb-2">Skin Care</h4>
        </div>
      </div>
-     <div class="col-6 col-md-2">
-       <div class="bg-light-beige cursor-pointer rounded" [routerLink] ='["/category", "womens-jewellery"]'>
+     <div class="col-6 col-lg-2">
+       <div class="bg-light-beige cursor-pointer rounded text-center" [routerLink] ='["/category", "womens-jewellery"]'>
          <img [src]="womenJewelleryImg" alt="green-oval-earring" class="img-fluid"/>
-         <p class="fw-bold d-flex justify-content-center">Jewellery</p>
+         <h4 class="fw-bold d-flex justify-content-center pb-2">Jewellery</h4>
        </div>
      </div>
-     <div class="col-6 col-md-2">
-       <div class="bg-light-beige cursor-pointer rounded" [routerLink] ='["/category", "womens-bags"]'>
+     <div class="col-6 col-lg-2">
+       <div class="bg-light-beige cursor-pointer rounded text-center" [routerLink] ='["/category", "womens-bags"]'>
          <img [src]="womenBagsImg" alt="blue-women's-handbag" class="img-fluid"/>
-         <p class="fw-bold d-flex justify-content-center">Bags</p>
+         <h4 class="fw-bold d-flex justify-content-center pb-2">Bags</h4>
        </div>
      </div>
   </div>
